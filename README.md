@@ -26,7 +26,7 @@ Remove generated files: `make distclean`
 
 * `src/` - C++/CUDA program
 * `autoencoder.ipynb` - Python notebook for training model in Keras ([original notebook](https://keras.io/examples/vision/autoencoder/))
-* `model2.txt` - all models weights in text format
+* `model2.txt` - all model weights in text format
 * `desc2.txt` - model architecture
 
 # Speed comparison

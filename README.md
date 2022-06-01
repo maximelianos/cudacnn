@@ -29,6 +29,17 @@ Remove generated files: `make distclean`
 * `model2.txt` - all models weights in text format
 * `desc2.txt` - model architecture
 
+# Speed comparison
+
+Several optimizations were attempted:
+* Join convolution and activation layer into one CUDA kernel (**conv+act**)
+* Parallel execution of convolution channels in one layer; recompute grid size for each layer (**effective threads**)
+* Reduce thread block size from 8 to 4 (**block=4**)
+* Copy input layer to local shared memory (**shared mem**)
+
+All convolutions have 3x3 range. Convolution weights of one layer have shape (3, 3, input_c, output_c) where input_c is number of channels in previous features, output_c is similar. The baseline implementation has separate convolution and activation kernels, threads are parallel by output feature height and width, thread grid is not adjusted between layers (which have different dimensions). Joint convolution and activation does not improve speed a lot. Recomputing the grid size and channel-wise parallelism removes most of non-functioning threads, and allows more threads to be executed at once. Small images have few kernels to execute, thus the speedup is larger. Reducing thread block size makes fewer threads that are out of image bounds. Shared memory is hard to implement, synchronization between threads may reduce performance.
+
+<img src=runtime.png>
 
 # References
 

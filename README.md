@@ -1,7 +1,9 @@
 # CUDA CNN
 
-Simple neural network convolutional encoder-decoder written in C++/CUDA.
-Model is first trained in Python Keras, weights are copied in simple text format
+Gitub: https://github.com/maximelianos/cudacnn
+
+Simple neural network image denoiser written in C++/CUDA.
+and encoder-decoder model is trained with Python Keras, weights are copied in simple text format
 to be executed by C++.
 
 # Build

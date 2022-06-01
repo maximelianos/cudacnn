@@ -1,0 +1,50 @@
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 28, 28, 1)]       0         
+                                                                 
+ conv2d_5 (Conv2D)           (None, 28, 28, 32)        320       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 14, 14, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_6 (Conv2D)           (None, 14, 14, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 7, 7, 32)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_transpose (Conv2DTra  (None, 14, 14, 32)       9248      
+ nspose)                                                         
+                                                                 
+ conv2d_transpose_1 (Conv2DT  (None, 28, 28, 32)       9248      
+ ranspose)                                                       
+                                                                 
+ conv2d_7 (Conv2D)           (None, 28, 28, 1)         289       
+                                                                 
+=================================================================
+Total params: 28,353
+Trainable params: 28,353
+Non-trainable params: 0
+
+
+Weights shape:
+
+c1 weights
+w (3, 3, 1, 32)
+b (32,)
+
+c2 weights
+w (3, 3, 32, 32)
+b (32,)
+
+t1 weights
+w (3, 3, 32, 32)
+b (32,)
+
+t2 weights
+w (3, 3, 32, 32)
+b (32,)
+
+c2 weights
+w (3, 3, 32, 1)
+b (1,)

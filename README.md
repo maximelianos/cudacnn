@@ -45,7 +45,7 @@ All convolutions have 3x3 range. Convolution weights of one layer have shape (3,
 
 # References
 
-https://github.com/lukas783/CUDA-Sobel-Filter
-https://github.com/ULHPC/tutorials/blob/devel/cuda/exercises/convolution/LoG_gpu_exercise.cu
-https://keras.io/examples/vision/autoencoder/
-https://github.com/lvandeve/lodepng
+1. https://github.com/lukas783/CUDA-Sobel-Filter
+2. https://github.com/ULHPC/tutorials/blob/devel/cuda/exercises/convolution/LoG_gpu_exercise.cu
+3. https://keras.io/examples/vision/autoencoder/
+4. https://github.com/lvandeve/lodepng

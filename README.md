@@ -2,9 +2,9 @@
 
 Github: https://github.com/maximelianos/cudacnn
 
-Simple neural network image denoiser written in C++/CUDA.
-and encoder-decoder model is trained with Python Keras, weights are copied in simple text format
-to be executed by C++.
+Neural encoder-decoder image denoiser written in C++/CUDA completely from scratch, with `(batch, layer, height, width)` data support.
+Model is trained with Python Keras, weights are exported in text format,
+inference in C++.
 
 # Build
 
